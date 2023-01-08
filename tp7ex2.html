@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TP7ex2</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+<form class="formm">
+    <div class="inputgrp">
+        <div class="first">
+        <input type="number" class="ff" id="number1" placeholder="1 nomber">
+        </div>
+    </div>
+
+    <div class="inputgrp">
+        <div class="first">
+        <input type="number" class="ff" id="number2" placeholder="2 nomber">
+        </div>
+    </div>
+        <div class="second">
+        <button type="button" class="rr" onclick="nbrPremier()">Afficher les nombres premiers</button>
+        </div>
+
+        <div class="aff">
+            <div class="affichage">
+                <p id="saisie"></p>
+            </div>
+        </div>
+</form>
+       <script>
+            function nbrPremier()
+            {
+                var a , b;
+                do{
+                    a=document.getElementById('number1').value;
+                    b=document.getElementById('number2').value;
+                    x=Number(a);
+                    y=Number(b);
+                }while (x<2 || x>=y || y>=1000); 
+                   for(i = x; i < y;i++){
+                    var verif = 1;
+                     for(j = 2; j < i/2; j++){
+                        if( i % j == 0){
+                            verif = 0;
+                        }
+
+                     }
+                     if(verif == 1){
+                        document.write("Le nombre "+ i +" est premier<br><br>");
+                     }
+                   }
+            }
+
+        </script>
+    </body>
+</html>
